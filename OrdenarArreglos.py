@@ -25,3 +25,9 @@ class QuickSort:
             self.QuickSort(a, p, q-1)
             self.QuickSort(a, q+1, r)
         return a
+
+    def ordenar(self, a):
+        p = 0
+        r = len(a) - 1
+        q = int((p + r) / 2)
+        return self.QuickSort(a, p, r)
