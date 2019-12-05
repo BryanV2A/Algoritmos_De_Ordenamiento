@@ -1,5 +1,6 @@
 from random import *
 
+# Declaración de Clase QuickSort para ordenar los arreglos
 class QuickSort:
     A = []
     B = []
@@ -34,6 +35,7 @@ class QuickSort:
         q = int((p + r) / 2)
         return self.QuickSort(a, p, r)
 
+    # Método encargado de generar dos arreglos uno de 100 elementos y el segundo de 60, ambos con números aleatorios
     def Generar_Areglos(self):
 
         for a in range(0, 100):
@@ -42,6 +44,8 @@ class QuickSort:
         for b in range(0, 60):
             self.B.append(randrange(1, 1000))
 
+    #  Método encargado de ordenar los arreglos creando dentro del método un objeto para realizar saltos al método
+    #  ordenamiento de la clase QuickSort
     def OrdenarArreglos(self):
 
         ordenar = QuickSort()
@@ -60,6 +64,7 @@ class QuickSort:
         ordenar.ordenar(self.C)
         print('Arreglo "C" ordenado: ', self.C)
 
+#Creación del objeto y acceso o salto a los método Generar y Ordenar Arreglos
 ordenar = QuickSort()
 ordenar.Generar_Areglos()
 ordenar.OrdenarArreglos()
