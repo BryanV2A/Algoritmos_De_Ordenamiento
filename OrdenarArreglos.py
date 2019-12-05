@@ -1,3 +1,5 @@
+from random import *
+
 class QuickSort:
     A = []
     B = []
@@ -31,3 +33,33 @@ class QuickSort:
         r = len(a) - 1
         q = int((p + r) / 2)
         return self.QuickSort(a, p, r)
+
+    def Generar_Areglos(self):
+
+        for a in range(0, 100):
+            self.A.append(randrange(1, 1000))
+
+        for b in range(0, 60):
+            self.B.append(randrange(1, 1000))
+
+    def OrdenarArreglos(self):
+
+        ordenar = QuickSort()
+
+        # Arreglo A
+        ordenar.ordenar(self.A)
+        print('Arreglo "A" ordenado: ', self.A)
+
+        # Arreglo B
+        ordenar.ordenar(self.B)
+        print('Arreglo "B" ordenado: ', self.B)
+
+        # Arreglo C
+        self.C = self.A
+        self.C.extend(self.B)
+        ordenar.ordenar(self.C)
+        print('Arreglo "C" ordenado: ', self.C)
+
+ordenar = QuickSort()
+ordenar.Generar_Areglos()
+ordenar.OrdenarArreglos()
