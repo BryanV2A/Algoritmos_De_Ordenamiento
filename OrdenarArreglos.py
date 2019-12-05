@@ -1,4 +1,5 @@
 from random import *
+from EliminarElementosRepetidos import *
 
 # Declaración de Clase QuickSort para ordenar los arreglos
 class QuickSort:
@@ -49,6 +50,7 @@ class QuickSort:
     def OrdenarArreglos(self):
 
         ordenar = QuickSort()
+        EliminarRepetidosYOrdenar = Arreglos()
 
         # Arreglo A
         ordenar.ordenar(self.A)
@@ -63,6 +65,9 @@ class QuickSort:
         self.C.extend(self.B)
         ordenar.ordenar(self.C)
         print('Arreglo "C" ordenado: ', self.C)
+
+        C = EliminarRepetidosYOrdenar.EliminarDuplicados(self.C)
+        print("\n Arreglo C sin elementos Duplicados: ", C)
 
 #Creación del objeto y acceso o salto a los método Generar y Ordenar Arreglos
 ordenar = QuickSort()
